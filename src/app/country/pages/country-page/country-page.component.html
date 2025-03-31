@@ -1,0 +1,17 @@
+@if(countyResource.error()){
+<shared-not-found></shared-not-found>
+}
+
+<!--  -->
+
+@if (countyResource.isLoading()) {
+<div class="flex flex-col justify-center items-center mt-10">
+  <div class="loading loading-spinner loading-lg"></div>
+</div>
+}
+
+<!--  -->
+
+@if (countyResource.hasValue()) {
+<country-information [country]="countyResource.value()"></country-information>
+}

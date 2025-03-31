@@ -1,0 +1,12 @@
+<input
+  type="text"
+  class="input input-bordered mr-2 w-56"
+  placeholder="{{ placeholder() }}"
+  autofocus
+  #txtSearch
+  (keyup.enter)="value.emit(txtSearch.value)"
+/>
+
+<button (click)="value.emit(txtSearch.value)" class="btn btn-success">
+  Buscar
+</button>
